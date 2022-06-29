@@ -1,0 +1,15 @@
+.packs {
+  margin-top: 1rem;
+}
+
+.pack {
+  background-color: var(--light-button);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 2rem;
+}
+
+.pack:hover {
+  cursor: pointer;
+  filter: invert(1);
+}

@@ -1,0 +1,19 @@
+.info {
+  background-color: var(--light-bg);
+  margin-top: 7rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+
+.money {
+  height: 1.8rem;
+  padding-top: 1px;
+}
+
+.collection {
+  background-color: var(--light-bg);
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
