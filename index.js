@@ -1,9 +1,10 @@
+const path = require('path')
 require('dotenv').config();
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
 var cors = require('cors');
-
+const publicDirectoryPath = path.join(__dirname, '/frontend/build')
 const port = process.env.PORT || 3000;
 
 const { getTrainer, postTrainer } = require('./services/trainer');
@@ -36,5 +37,11 @@ app.post('/pokemon', postPokemon);
 
 app.post('/pokeCollection/pack', postPack);
 app.post('/pokeCollection/evolve', postEvolve);
+
+app.use(express.static(publicDirectoryPath))
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicDirectoryPath, 'index.html'));
+}); 
 
 app.listen(port, () => console.log(`PokeCollection app listening at http://localhost:${port}`));
